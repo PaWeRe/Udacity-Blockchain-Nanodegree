@@ -176,7 +176,8 @@ class Blockchain {
                 } else {
                     reject('Your signature is not valid');
                 }
-            } else {
+            } 
+            else {
                 reject('You should submit the star before 5 minutes');
             }
             
@@ -270,27 +271,31 @@ class Blockchain {
         validateChain() {
             let self = this;
             let errorLog = [];
+
+            //Checking 
             return new Promise(async (resolve, reject) => {
                 let promises = [];
-                let chainIndex = 0;
+                let index = 0;
                 self.chain.forEach(block => {
                     promises.push(block.validate());
                     if(block.height > 0) {
                         let previousBlockHash = block.previousBlockHash;
-                        let blockHash = chain[chainIndex-1].hash;
+                        let blockHash = chain[index-1].hash;
                         if(blockHash != previousBlockHash){
-                            errorLog.push(`Error - Block Heigh: ${block.height} - Previous hash does not match.`);
+                            errorLog.push(`Error - Previous hash does not match.`);
                         }
                     }
-                    chainIndex++;
+                    index++;
                 });
+
+                //Checking
                 Promise.all(promises).then((results) => {
-                    chainIndex = 0;
+                    index = 0;
                     results.forEach(valid => {
                         if(!valid){
-                            errorLog.push(`Error - Block Heigh: ${self.chain[chainIndex].height} - Has been tampered with.`);
+                            errorLog.push(`Error - Has been tampered with.`);
                         }
-                        chainIndex++;
+                        index++;
                     });
                     resolve(errorLog);
                 }).catch((err) => { console.log(err); reject(err)});
