@@ -74,8 +74,8 @@ class Block {
      *     or Reject with an error.
      */
     getBData() {
-        let self = this;
-        return new Promise((resolve, reject) => {
+        //let self = this;
+       // return new Promise((resolve, reject) => {
 
         // Getting the encoded data saved in the Block
         let encodeddata = this.body;
@@ -89,14 +89,15 @@ class Block {
         // Resolve with the data if the object isn't the Genesis block
         if(this.height > 0) {
 
-            resolve(object);
+            //resolve(object);
+            return object;
         }
-       else {
+      /* else {
 
             reject("Error - in getBData method!");
-        }
+        }*/
         
-    });
+    //});
 
     }
 
