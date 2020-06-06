@@ -7,6 +7,9 @@
  *  isn't a persisten storage method.
  *  
  */
+/* Overall Remark: For my solution I have looked through examples in the Q&A section of udacity classroom and have looked at 
+two approaches given in Github (https://github.com/udacity/nd1309_Project1_v2/blob/master/src/blockchain.js, https://github.com/clickingmouse/Udacity-blockchain-proj-01/blob/master/src/blockchain.js). 
+I have however tried to develop my own solution, as seen below.*/
 
 const SHA256 = require('crypto-js/sha256');
 const BlockClass = require('./block.js');
@@ -65,62 +68,24 @@ class Blockchain {
         let self = this;
         return new Promise(async (resolve, reject) => {
             //block height
-            let blockobject = block;
             let height = await self.getChainHeight();
 
             //timestamp
-            blockobject.time = new Date().getTime().toString().slice(0,-3);
+            block.time = new Date().getTime().toString().slice(0,-3);
 
             //Checking the height of the block, in order to assign the previous block hash
             if(height > 0){
-                blockobject.height = height + 1;
-                let previousblock = self.chain[self.height];
-                blockobject.previousBlockHash = previousblock.hash;
-                //blockobject.previousBlockHash = self.chain[self.getChainHeight-1].hash;
-
-                //creating the block hash and pushing the block onto the chain array
-                blockobject.hash = SHA256(JSON.stringify(blockobject)).toString();
-                self.chain.push(blockobject);
-                self.height = self.chain.length -1;
-                resolve(blockobject);
-            }
-            else{
-                //For Genesis Block!
-                blockobject.height = height + 1;
-                blockobject.hash = SHA256(JSON.stringify(blockobject)).toString();
-                self.chain.push(blockobject);
-                self.height = self.chain.length -1;
-                resolve(blockobject);
-            }
-            
-            
-
-          /*  //Checking if Block could be added
-            if((this.chain[this.chain.length - 1] = blockobject)) {
-                resolve(blockobject);
-              } 
-            else {
-                reject("Error - adding block!");
-              } 
-            
-           if(self.getChainHeight>0)
-            {
                 
-                newBlock.previousBlockhash = self.chain[self.getChainHeight-1].hash;
-                newBlock.time = new Date().getTime().toString().slice(0,-3);
-                newBlock.height = self.getChainHeight;
-
-                newBlock.hash = SHA256(JSON.stringify(newBlock)).toString();
-                self.chain.push(newBlock);
-                self.height++;
-        
+                let previousblock = self.chain[self.height];
+                block.previousBlockHash = previousblock.hash;
+                
             }
-            *elif (this.getChainHeight==0)*
-            else
-            {
-               self.initializeChain;
-            } */
-           
+
+            block.height = height + 1;
+            block.hash = SHA256(JSON.stringify(block)).toString();
+            self.chain.push(block);
+            self.height++;
+            resolve(block);  
         });
     }
 
@@ -249,47 +214,31 @@ class Blockchain {
      * 2. Each Block should check the with the previousBlockHash
      */
 
-    /*validateChain() {
-        let self = this;
-        let errorLog = [];
-        return new Promise(async (resolve, reject) => {
-            
-            let previousBlockHash = null
-            for (const block of self.chain) {
-                const isValid = await block.validate();
-                if (!isValid || block.previousBlockHash !== previousBlockHash) {
-                    errorLog.push({
-                        block,
-                        error: "Unable to validate block"
-                    })
-                }
-                previousBlockHash = block.previousBlockHash;
-            }
-            resolve(errorLog)
-        }); */
-
         validateChain() {
             let self = this;
             let errorLog = [];
 
-            //Checking 
+            //Checking if previous Blockhash of current Block is matching with Block hash of previous one!
             return new Promise(async (resolve, reject) => {
-                let promises = [];
+                
+                //Index of Chain and array 
                 let index = 0;
+                let array = [];
+
                 self.chain.forEach(block => {
-                    promises.push(block.validate());
+                    array.push(block.validate());
                     if(block.height > 0) {
                         let previousBlockHash = block.previousBlockHash;
-                        let blockHash = chain[index-1].hash;
-                        if(blockHash != previousBlockHash){
+                        let blockhash = chain[index-1].hash;
+                        if(blockhash != previousBlockHash){
                             errorLog.push(`Error - Previous hash does not match.`);
                         }
                     }
                     index++;
                 });
 
-                //Checking
-                Promise.all(promises).then((results) => {
+                //Checking if block has been tampered with, with validate() function
+                Promise.all(array).then((results) => {
                     index = 0;
                     results.forEach(valid => {
                         if(!valid){

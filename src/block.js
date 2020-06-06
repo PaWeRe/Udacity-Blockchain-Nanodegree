@@ -9,6 +9,10 @@
  *  run asynchronous.
  */
 
+ /* Overall Remark: For my solution I have looked through examples in the Q&A section of udacity classroom and have looked at 
+two approaches given in Github (https://github.com/udacity/nd1309_Project1_v2/blob/master/src/blockchain.js, https://github.com/clickingmouse/Udacity-blockchain-proj-01/blob/master/src/blockchain.js). 
+I have however tried to develop my own solution, as seen below.*/
+
 const SHA256 = require('crypto-js/sha256');
 const hex2ascii = require('hex2ascii');
 
