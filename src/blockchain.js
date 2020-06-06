@@ -129,21 +129,17 @@ class Blockchain {
             let time = parseInt(message.split(':')[1]);
             let currentTime = parseInt(new Date().getTime().toString().slice(0, -3));
 
-            if((currentTime - time) < 300000) 
-            {
-                let validmessage = bitcoinMessage.verify(message, address, signature);
-                
-                if(validmessage)
-                {
+            if((currentTime - time) < 300000) {  
+                if(bitcoinMessage.verify(message, address, signature){
                     let block = new BlockClass.Block({owner: address, star: star});
                     let addedblock = await self._addBlock(block);
                     resolve(addedblock);
                 } else {
-                    reject('Your signature is not valid');
+                    reject('Signature is not valid!');
                 }
             } 
             else {
-                reject('You should submit the star before 5 minutes');
+                reject('Submit Star in time frame of 5 minutes!');
             }
             
         });
@@ -175,7 +171,7 @@ class Blockchain {
     getBlockByHeight(height) {
         let self = this;
         return new Promise((resolve, reject) => {
-            let block = self.chain.filter(p => p.height === height)[0];
+            let block = self.chain.filter(p => p.height === height);
             if(block){
                 resolve(block);
             } else {
@@ -195,8 +191,8 @@ class Blockchain {
         let stars = [];
         return new Promise((resolve, reject) => {
             
-            self.chain.forEach((x) => {
-                let data = x.getBData();
+            self.chain.forEach((block) => {
+                let data = block.getBData();
                 if(data){
                     if (data.owner === address){
                         stars.push(data);
@@ -218,38 +214,32 @@ class Blockchain {
             let self = this;
             let errorLog = [];
 
-            //Checking if previous Blockhash of current Block is matching with Block hash of previous one!
             return new Promise(async (resolve, reject) => {
                 
                 //Index of Chain and array 
                 let index = 0;
-                let array = [];
 
                 self.chain.forEach(block => {
-                    array.push(block.validate());
+                    let validBlock = block.validate();
                     if(block.height > 0) {
                         let previousBlockHash = block.previousBlockHash;
                         let blockhash = chain[index-1].hash;
+                        //Checking if previous Blockhash of current Block is matching with Block hash of previous one (block.js)!
                         if(blockhash != previousBlockHash){
-                            errorLog.push(`Error - Previous hash does not match.`);
+                            errorLog.push(`Error - Hash of previous Block does not match previousBlockHasch of current Block!`);
+                        }
+                        //Checking if block has been tampered with (hash must be the same!), with validate() function from block.js
+                        if(!validBlock){
+                            errorLog.push(`Error - Block hash has changed!`);
                         }
                     }
                     index++;
+                    resolve(errorLog);
                 });
 
-                //Checking if block has been tampered with, with validate() function
-                Promise.all(array).then((results) => {
-                    index = 0;
-                    results.forEach(valid => {
-                        if(!valid){
-                            errorLog.push(`Error - Has been tampered with.`);
-                        }
-                        index++;
-                    });
-                    resolve(errorLog);
-                }).catch((err) => { console.log(err); reject(err)});
-            });
-    }
+            }
+
+        }
 
 }
 
