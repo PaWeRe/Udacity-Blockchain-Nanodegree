@@ -9,10 +9,6 @@
  *  run asynchronous.
  */
 
- /* Overall Remark: For my solution I have looked through examples in the Q&A section of udacity classroom and have looked at 
-two approaches given in Github (https://github.com/udacity/nd1309_Project1_v2/blob/master/src/blockchain.js, https://github.com/clickingmouse/Udacity-blockchain-proj-01/blob/master/src/blockchain.js). 
-I have however tried to develop my own solution, as seen below.*/
-
 const SHA256 = require('crypto-js/sha256');
 const hex2ascii = require('hex2ascii');
 
@@ -45,6 +41,7 @@ class Block {
 
             // Save in auxiliary variable the current block hash
             let AuxHash = self.hash; 
+            self.hash = AuxHash;
             self.hash = null;
             // Recalculate the hash of the Block
             const recalculatedHash = SHA256(JSON.stringify(this)).toString();
@@ -57,7 +54,7 @@ class Block {
                 }
             // Returning the Block is valid  
             else{
-                reject(false);
+                resolve(false);
                 console.log("Block is not valid!");
                 }
 
@@ -75,7 +72,7 @@ class Block {
      */
     getBData() {
         //let self = this;
-       // return new Promise((resolve, reject) => {
+        //return new Promise((resolve, reject) => {
 
         // Getting the encoded data saved in the Block
         let encodeddata = this.body;
@@ -89,12 +86,12 @@ class Block {
         // Resolve with the data if the object isn't the Genesis block
         if(this.height > 0) {
 
-            //resolve(object);
+            //console.log("Test - getBData!");
             return object;
         }
-      /* else {
+       /* else {
 
-            reject("Error - in getBData method!");
+            reject("Error - getBData method!");
         }*/
         
     //});
