@@ -1,5 +1,9 @@
 pragma solidity >=0.4.24;
 // Define a contract 'Supplychain'
+
+// Import the library 'Roles'
+import "../coffeecore/Ownable.sol" as O2;
+
 contract SupplyChain {
 
   // Define 'owner'
@@ -215,21 +219,26 @@ contract SupplyChain {
   // Define a function 'buyItem' that allows the disributor to mark an item 'Sold'
   // Use the above defined modifiers to check if the item is available for sale, if the buyer has paid enough, 
   // and any excess ether sent is refunded back to the buyer
-  function buyItem(uint _upc) public payable 
+
+  function buyItem(uint _upc) public payable
     // Call modifier to check if upc has passed previous supply chain stage
     forSale(_upc)
     // Call modifer to check if buyer has paid enough
-    paidEnough(msg.value)
+    paidEnough(items[_upc].productPrice)
     // Call modifer to send any excess ether back to buyer
     checkValue(_upc)
     {
     // Update the appropriate fields - ownerID, distributorID, itemState
+    items[_upc].itemState = State.Sold;
     items[_upc].ownerID = msg.sender;
     items[_upc].distributorID = msg.sender;
-    items[_upc].itemState = State.Sold;
+    //O2.transferOwnership(items[_upc].distributorID);
+    
 
     // Transfer money to farmer
-    items[_upc].originFarmerID.transfer(items[_upc].productPrice);
+    //items[_upc].originFarmerID.transfer(items[_upc].productPrice);
+    uint price = items[_upc].productPrice;
+    items[_upc].originFarmerID.transfer(price);
 
     // emit the appropriate event
     emit Sold(upc);
@@ -300,7 +309,7 @@ contract SupplyChain {
   itemSKU = items[_upc].sku;
   itemUPC = items[_upc].upc;
   ownerID = items[_upc].ownerID;
-  originFarmerID = items[_upc].ownerID;
+  originFarmerID = items[_upc].originFarmerID;
   originFarmName = items[_upc].originFarmName;
   originFarmInformation = items[_upc].originFarmInformation;
   originFarmLatitude = items[_upc].originFarmLatitude;
