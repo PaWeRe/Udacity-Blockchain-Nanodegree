@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity >=0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -27,7 +27,7 @@ contract RetailerRole {
 
   // Define a function 'isRetailer' to check this role
   function isRetailer(address account) public view returns (bool) {
-    return retailer.has(account);
+    return retailers.has(account);
   }
 
   // Define a function 'addRetailer' that adds this role
