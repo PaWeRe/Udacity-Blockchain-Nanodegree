@@ -9,7 +9,127 @@
 
 ## 2. General write-up
 
-**Contract address on Rinkeby Network:** TBD
+**Contract addresses on Rinkeby Network:** 
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 0x989680
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x105ed6d922ac969ef3e0ad131e7bec0aa6b0947a2cefd30448ce30c6fdaf0b2d
+   > Blocks: 1            Seconds: 16
+   > contract address:    0x8a53E5fE55c6325775A017e9098BDC6b22971f55
+   > block number:        7190453
+   > block timestamp:     1600012807
+   > account:             0x8D8029fbDB15591122054FEC8567acC3b0A01bcf
+   > balance:             2.974789884
+   > gas used:            225237
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00225237 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00225237 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'FarmerRole'
+   ----------------------
+   > transaction hash:    0x5e8ba8664675ece64a0a80cb17e5872a3d992cfb98982e1f510413c6bc1fb956
+   > Blocks: 0            Seconds: 12
+   > contract address:    0xe83992a4Ea1Fec026284D843B09eb478E7c2bdE8
+   > block number:        7190455
+   > block timestamp:     1600012837
+   > account:             0x8D8029fbDB15591122054FEC8567acC3b0A01bcf
+   > balance:             2.971305414
+   > gas used:            306084
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00306084 ETH
+
+
+   Deploying 'DistributorRole'
+   ---------------------------
+   > transaction hash:    0x256701aca263800b68e46554e3699c41e00d4d488dd394579fa56bcbaf5cbc55
+   > Blocks: 0            Seconds: 8
+   > contract address:    0x37A57f3F8bCc3A03be1886A1760f52b3A341a1e0
+   > block number:        7190456
+   > block timestamp:     1600012852
+   > account:             0x8D8029fbDB15591122054FEC8567acC3b0A01bcf
+   > balance:             2.968244694
+   > gas used:            306072
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00306072 ETH
+
+
+   Deploying 'RetailerRole'
+   ------------------------
+   > transaction hash:    0xe5e08b3da529549b18353e568809e5bcf9dcc6183d5a0f10c26dae035fe1014a
+   > Blocks: 0            Seconds: 8
+   > contract address:    0x65c6621Ce690AA9d9dC51a1Cd3916B692AACfA10
+   > block number:        7190457
+   > block timestamp:     1600012867
+   > account:             0x8D8029fbDB15591122054FEC8567acC3b0A01bcf
+   > balance:             2.965183854
+   > gas used:            306084
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00306084 ETH
+
+
+   Deploying 'ConsumerRole'
+   ------------------------
+   > transaction hash:    0x3a3e28f525b90fee059a007338996fb37f30ee89390fa1e0d4214bbb8f502f28
+   > Blocks: 0            Seconds: 8
+   > contract address:    0xCE8Cdb3CF569f43C076fBc35f6e78cCB53065eFb
+   > block number:        7190458
+   > block timestamp:     1600012882
+   > account:             0x8D8029fbDB15591122054FEC8567acC3b0A01bcf
+   > balance:             2.962123014
+   > gas used:            306084
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00306084 ETH
+
+
+   Deploying 'SupplyChain'
+   -----------------------
+   > transaction hash:    0xb345593e7440808690969a83880dbc1a88d0ca099eb2a3d79a8381ab998a8582
+   > Blocks: 0            Seconds: 8
+   > contract address:    0xEc857BBE2c622A8e3213D3e8c43DEB9a3904b6e2
+   > block number:        7190459
+   > block timestamp:     1600012897
+   > account:             0x8D8029fbDB15591122054FEC8567acC3b0A01bcf
+   > balance:             2.935889954
+   > gas used:            2623306
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02623306 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0384763 ETH
+
+
+Summary
+=======
+> Total deployments:   6
+> Final cost:          0.04072867 ETH
 
 **Main steps:** 
 
