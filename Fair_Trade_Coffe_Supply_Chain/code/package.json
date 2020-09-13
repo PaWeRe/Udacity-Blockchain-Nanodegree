@@ -15,5 +15,8 @@
   },
   "directories": {
     "test": "test"
+  },
+  "dependencies": {
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }

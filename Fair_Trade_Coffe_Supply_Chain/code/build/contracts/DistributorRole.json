@@ -79,15 +79,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isDistributor\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol\":\"DistributorRole\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol\":{\"keccak256\":\"0xc495b29a652ea28c8f71ad9509e1fa1e211ee999b88e8e828a82c6e1dae196b6\",\"urls\":[\"bzz-raw://51273efdff162fa4d35836a8c12bb45bb4d4467dc66a80a11a5ae332dffdd047\",\"dweb:/ipfs/QmTbfyUpfsYUXqa5AzSMj9eAmcM8ZRoDHvdUjnjthUAfVY\"]},\"/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/project-6/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x942fa91c1423ccac79735441bd48c737a8f7698374efb8502bf41fe0cd770a03\",\"urls\":[\"bzz-raw://e67984e8f2530e8b4d5d4ad6e2af542f575f1027039df2337a744079fea06fde\",\"dweb:/ipfs/QmSWeS8FtGn4aChVRmTzYNF1dpkiyG5XGqgZsynqg6oeFB\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506100203361002560201b60201c565b6101c7565b61003d81600061008360201b6103271790919060201c565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100bd57600080fd5b6100cd828261013560201b60201c565b156100d757600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561017057600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610408806101d66000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063644241db146100465780637250e224146100505780638f0c86fa14610094575b600080fd5b61004e6100f0565b005b6100926004803603602081101561006657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100fb565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610119565b604051808215151515815260200191505060405180910390f35b6100f933610136565b565b61010433610119565b61010d57600080fd5b61011681610190565b50565b600061012f8260006101ea90919063ffffffff16565b9050919050565b61014a81600061027c90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6101a481600061032790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561022557600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102b657600080fd5b6102c082826101ea565b6102c957600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561036157600080fd5b61036b82826101ea565b1561037557600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a72315820f0a9e5f89bc0862234da92f0cd63f203ca44057dd564b53bc3c103c72c87a16864736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063644241db146100465780637250e224146100505780638f0c86fa14610094575b600080fd5b61004e6100f0565b005b6100926004803603602081101561006657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100fb565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610119565b604051808215151515815260200191505060405180910390f35b6100f933610136565b565b61010433610119565b61010d57600080fd5b61011681610190565b50565b600061012f8260006101ea90919063ffffffff16565b9050919050565b61014a81600061027c90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6101a481600061032790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561022557600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102b657600080fd5b6102c082826101ea565b6102c957600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561036157600080fd5b61036b82826101ea565b1561037557600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a72315820f0a9e5f89bc0862234da92f0cd63f203ca44057dd564b53bc3c103c72c87a16864736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"DistributorRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isDistributor\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceDistributor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/code/contracts/coffeeaccesscontrol/DistributorRole.sol\":\"DistributorRole\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/code/contracts/coffeeaccesscontrol/DistributorRole.sol\":{\"keccak256\":\"0xc495b29a652ea28c8f71ad9509e1fa1e211ee999b88e8e828a82c6e1dae196b6\",\"urls\":[\"bzz-raw://51273efdff162fa4d35836a8c12bb45bb4d4467dc66a80a11a5ae332dffdd047\",\"dweb:/ipfs/QmTbfyUpfsYUXqa5AzSMj9eAmcM8ZRoDHvdUjnjthUAfVY\"]},\"/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/code/contracts/coffeeaccesscontrol/Roles.sol\":{\"keccak256\":\"0x942fa91c1423ccac79735441bd48c737a8f7698374efb8502bf41fe0cd770a03\",\"urls\":[\"bzz-raw://e67984e8f2530e8b4d5d4ad6e2af542f575f1027039df2337a744079fea06fde\",\"dweb:/ipfs/QmSWeS8FtGn4aChVRmTzYNF1dpkiyG5XGqgZsynqg6oeFB\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506100203361002560201b60201c565b6101c7565b61003d81600061008360201b6103271790919060201c565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156100bd57600080fd5b6100cd828261013560201b60201c565b156100d757600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561017057600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b610408806101d66000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063644241db146100465780637250e224146100505780638f0c86fa14610094575b600080fd5b61004e6100f0565b005b6100926004803603602081101561006657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100fb565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610119565b604051808215151515815260200191505060405180910390f35b6100f933610136565b565b61010433610119565b61010d57600080fd5b61011681610190565b50565b600061012f8260006101ea90919063ffffffff16565b9050919050565b61014a81600061027c90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6101a481600061032790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561022557600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102b657600080fd5b6102c082826101ea565b6102c957600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561036157600080fd5b61036b82826101ea565b1561037557600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a72315820e0a803eb78a2fc2482b8a828ac792d9bb3163e83c7a5be516b03d5cb9470f9fd64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063644241db146100465780637250e224146100505780638f0c86fa14610094575b600080fd5b61004e6100f0565b005b6100926004803603602081101561006657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506100fb565b005b6100d6600480360360208110156100aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610119565b604051808215151515815260200191505060405180910390f35b6100f933610136565b565b61010433610119565b61010d57600080fd5b61011681610190565b50565b600061012f8260006101ea90919063ffffffff16565b9050919050565b61014a81600061027c90919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167f126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d5960405160405180910390a250565b6101a481600061032790919063ffffffff16565b8073ffffffffffffffffffffffffffffffffffffffff167fddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea860405160405180910390a250565b60008073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561022557600080fd5b8260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff16905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156102b657600080fd5b6102c082826101ea565b6102c957600080fd5b60008260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff0219169083151502179055505050565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561036157600080fd5b61036b82826101ea565b1561037557600080fd5b60018260000160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550505056fea265627a7a72315820e0a803eb78a2fc2482b8a828ac792d9bb3163e83c7a5be516b03d5cb9470f9fd64736f6c63430005100032",
   "sourceMap": "160:1655:2:-;;;610:59;8:9:-1;5:2;;;30:1;27;20:12;5:2;610:59:2;637:27;653:10;637:15;;;:27;;:::i;:::-;160:1655;;1434:131;1499:25;1516:7;1499:12;:16;;;;;;:25;;;;:::i;:::-;1552:7;1535:25;;;;;;;;;;;;1434:131;:::o;245:175:5:-;344:1;325:21;;:7;:21;;;;317:30;;;;;;362:18;366:4;372:7;362:3;;;:18;;:::i;:::-;361:19;353:28;;;;;;411:4;388;:11;;:20;400:7;388:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;245:175;;:::o;742:174::-;834:4;875:1;856:21;;:7;:21;;;;848:30;;;;;;891:4;:11;;:20;903:7;891:20;;;;;;;;;;;;;;;;;;;;;;;;;884:27;;742:174;;;;:::o;160:1655:2:-;;;;;;;",
   "deployedSourceMap": "160:1655:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;160:1655:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1255:79;;;:::i;:::-;;1077:107;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1077:107:2;;;;;;;;;;;;;;;;;;;:::i;:::-;;895:118;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;895:118:2;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1255:79;1299:30;1318:10;1299:18;:30::i;:::-;1255:79::o;1077:107::-;795:25;809:10;795:13;:25::i;:::-;787:34;;;;;;1155:24;1171:7;1155:15;:24::i;:::-;1077:107;:::o;895:118::-;964:4;983:25;1000:7;983:12;:16;;:25;;;;:::i;:::-;976:32;;895:118;;;:::o;1674:139::-;1742:28;1762:7;1742:12;:19;;:28;;;;:::i;:::-;1800:7;1781:27;;;;;;;;;;;;1674:139;:::o;1434:131::-;1499:25;1516:7;1499:12;:16;;:25;;;;:::i;:::-;1552:7;1535:25;;;;;;;;;;;;1434:131;:::o;742:174:5:-;834:4;875:1;856:21;;:7;:21;;;;848:30;;;;;;891:4;:11;;:20;903:7;891:20;;;;;;;;;;;;;;;;;;;;;;;;;884:27;;742:174;;;;:::o;486:178::-;588:1;569:21;;:7;:21;;;;561:30;;;;;;605:18;609:4;615:7;605:3;:18::i;:::-;597:27;;;;;;654:5;631:4;:11;;:20;643:7;631:20;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;;;;;;;486:178;;:::o;245:175::-;344:1;325:21;;:7;:21;;;;317:30;;;;;;362:18;366:4;372:7;362:3;:18::i;:::-;361:19;353:28;;;;;;411:4;388;:11;;:20;400:7;388:20;;;;;;;;;;;;;;;;:27;;;;;;;;;;;;;;;;;;245:175;;:::o",
   "source": "pragma solidity >=0.4.24;\n\n// Import the library 'Roles'\nimport \"./Roles.sol\";\n\n// Define a contract 'DistributorRole' to manage this role - add, remove, check\ncontract DistributorRole {\n  using Roles for Roles.Role;\n\n  // Define 2 events, one for Adding, and other for Removing\n  event DistributorAdded(address payable indexed account);\n  event DistributorRemoved(address payable indexed account);\n\n  // Define a struct 'distributors' by inheriting from 'Roles' library, struct Role\n  Roles.Role private distributors;\n\n  // In the constructor make the address that deploys this contract the 1st distributor\n  constructor() public {\n    _addDistributor(msg.sender);\n  }\n\n  // Define a modifier that checks to see if msg.sender has the appropriate role\n  modifier onlyDistributor() {\n    require(isDistributor(msg.sender));\n    _;\n  }\n\n  // Define a function 'isDistributor' to check this role\n  function isDistributor(address payable account) public view returns (bool) {\n    return distributors.has(account);\n  }\n\n  // Define a function 'addDistributor' that adds this role\n  function addDistributor(address payable account) public onlyDistributor {\n    _addDistributor(account);\n  }\n\n  // Define a function 'renounceDistributor' to renounce this role\n  function renounceDistributor() public {\n    _removeDistributor(msg.sender);\n  }\n\n  // Define an internal function '_addDistributor' to add this role, called by 'addDistributor'\n  function _addDistributor(address payable account) internal {\n    distributors.add(account);\n    emit DistributorAdded(account);\n  }\n\n  // Define an internal function '_removeDistributor' to remove this role, called by 'removeDistributor'\n  function _removeDistributor(address payable account) internal {\n    distributors.remove(account);\n    emit DistributorRemoved(account);\n  }\n}",
-  "sourcePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol",
+  "sourcePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/code/contracts/coffeeaccesscontrol/DistributorRole.sol",
   "ast": {
-    "absolutePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol",
+    "absolutePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/code/contracts/coffeeaccesscontrol/DistributorRole.sol",
     "exportedSymbols": {
       "DistributorRole": [
         262
@@ -108,7 +108,7 @@
         "src": "0:25:2"
       },
       {
-        "absolutePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+        "absolutePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/code/contracts/coffeeaccesscontrol/Roles.sol",
         "file": "./Roles.sol",
         "id": 162,
         "nodeType": "ImportDirective",
@@ -292,7 +292,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1504,
+                          "referencedDeclaration": 1491,
                           "src": "653:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -398,7 +398,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1504,
+                              "referencedDeclaration": 1491,
                               "src": "809:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -464,10 +464,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1507,
-                        1508
+                        1494,
+                        1495
                       ],
-                      "referencedDeclaration": 1507,
+                      "referencedDeclaration": 1494,
                       "src": "787:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -824,7 +824,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1504,
+                          "referencedDeclaration": 1491,
                           "src": "1318:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1287,7 +1287,7 @@
     "src": "0:1815:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/project-6/contracts/coffeeaccesscontrol/DistributorRole.sol",
+    "absolutePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/code/contracts/coffeeaccesscontrol/DistributorRole.sol",
     "exportedSymbols": {
       "DistributorRole": [
         262
@@ -1308,7 +1308,7 @@
         "src": "0:25:2"
       },
       {
-        "absolutePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/project-6/contracts/coffeeaccesscontrol/Roles.sol",
+        "absolutePath": "/Users/PWR/Documents/Udacity/Udacity-Blockchain-Nanodegree/Fair_Trade_Coffe_Supply_Chain/code/contracts/coffeeaccesscontrol/Roles.sol",
         "file": "./Roles.sol",
         "id": 162,
         "nodeType": "ImportDirective",
@@ -1492,7 +1492,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1504,
+                          "referencedDeclaration": 1491,
                           "src": "653:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1598,7 +1598,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1504,
+                              "referencedDeclaration": 1491,
                               "src": "809:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1664,10 +1664,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1507,
-                        1508
+                        1494,
+                        1495
                       ],
-                      "referencedDeclaration": 1507,
+                      "referencedDeclaration": 1494,
                       "src": "787:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2024,7 +2024,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1504,
+                          "referencedDeclaration": 1491,
                           "src": "1318:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2522,11 +2522,11 @@
       },
       "links": {},
       "address": "0x933f531740eE49231cBd4e7BdF8dd8220a8f14Ad",
-      "transactionHash": "0x8a08a24c6ec479be4c467beaf3d68946809944d5d721c7a81aebc45bdbccc63d"
+      "transactionHash": "0x607239750933bf8f71e510429aae55861e795a3ec118631675c594633c6e636a"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-09-13T10:39:57.119Z",
+  "updatedAt": "2020-09-13T15:39:48.472Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
