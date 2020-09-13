@@ -15,21 +15,13 @@ Steps: TBD
 
 ## 3. UML diagrams
 
-- Activity diagram
+- [Activity diagram](../architecture/FTC_UML-activity-diagram.drawio.pdf)
 
-(add file)
+- [Sequence diagram](../architecture/FTC_UML-sequence-diagram.drawio.pdf)
 
-- Sequence diagram
+- [State diagram](../architecture/FTC_UML-state-diagram.drawio.pdf)
 
-(add file)
-
-- State diagram
-
-(add file)
-
-- Class diagram (Data model)
-
-(add file)
+- [Class diagram (Data model)](../architecture/FTC_UML-class-diagram.drawio.pdf)
 
 ## 4. Libaries
 
