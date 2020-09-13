@@ -1,7 +1,7 @@
 {
-  "name": "supply-chain-E",
+  "name": "supply-chain-e",
   "version": "1.0.0",
-  "description": "",
+  "description": "## 1. Program version numbers",
   "main": "index.js",
   "scripts": {
     "dev": "lite-server",
@@ -12,5 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "lite-server": "2.4.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }

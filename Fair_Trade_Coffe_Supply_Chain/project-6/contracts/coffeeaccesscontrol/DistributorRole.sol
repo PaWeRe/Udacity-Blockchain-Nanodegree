@@ -8,8 +8,8 @@ contract DistributorRole {
   using Roles for Roles.Role;
 
   // Define 2 events, one for Adding, and other for Removing
-  event DistributorAdded(address indexed account);
-  event DistributorRemoved(address indexed account);
+  event DistributorAdded(address payable indexed account);
+  event DistributorRemoved(address payable indexed account);
 
   // Define a struct 'distributors' by inheriting from 'Roles' library, struct Role
   Roles.Role private distributors;
@@ -26,12 +26,12 @@ contract DistributorRole {
   }
 
   // Define a function 'isDistributor' to check this role
-  function isDistributor(address account) public view returns (bool) {
+  function isDistributor(address payable account) public view returns (bool) {
     return distributors.has(account);
   }
 
   // Define a function 'addDistributor' that adds this role
-  function addDistributor(address account) public onlyDistributor {
+  function addDistributor(address payable account) public onlyDistributor {
     _addDistributor(account);
   }
 
@@ -41,13 +41,13 @@ contract DistributorRole {
   }
 
   // Define an internal function '_addDistributor' to add this role, called by 'addDistributor'
-  function _addDistributor(address account) internal {
+  function _addDistributor(address payable account) internal {
     distributors.add(account);
     emit DistributorAdded(account);
   }
 
   // Define an internal function '_removeDistributor' to remove this role, called by 'removeDistributor'
-  function _removeDistributor(address account) internal {
+  function _removeDistributor(address payable account) internal {
     distributors.remove(account);
     emit DistributorRemoved(account);
   }

@@ -12,7 +12,7 @@ library Roles {
   /**
    * @dev give an account access to this role
    */
-  function add(Role storage role, address account) internal {
+  function add(Role storage role, address payable account) internal {
     require(account != address(0));
     require(!has(role, account));
 
@@ -22,7 +22,7 @@ library Roles {
   /**
    * @dev remove an account's access to this role
    */
-  function remove(Role storage role, address account) internal {
+  function remove(Role storage role, address payable account) internal {
     require(account != address(0));
     require(has(role, account));
 
@@ -33,7 +33,7 @@ library Roles {
    * @dev check if an account has this role
    * @return bool
    */
-  function has(Role storage role, address account)
+  function has(Role storage role, address payable account)
     internal
     view
     returns (bool)
