@@ -2491,6 +2491,39 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {
+        "0x2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address payable",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FarmerAdded",
+          "type": "event"
+        },
+        "0xa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address payable",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FarmerRemoved",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xe83992a4Ea1Fec026284D843B09eb478E7c2bdE8",
+      "transactionHash": "0x5e8ba8664675ece64a0a80cb17e5872a3d992cfb98982e1f510413c6bc1fb956"
+    },
     "5777": {
       "events": {
         "0x2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd0": {
@@ -2526,7 +2559,7 @@
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-09-13T15:39:48.464Z",
+  "updatedAt": "2020-09-13T16:01:53.880Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
