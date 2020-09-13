@@ -6,6 +6,7 @@
 - **Solidity v0.5.16 (solc-js)**: used to write smart contracts.
 - **Node v12.16.3**: used for deploying UI to browser (for building network applications).
 - **Web3.js v1.2.1**: DApp interaction with local or remote Ethereum node (via HTTP).
+- **Infura**: connecting the DApp to the Ethereum (Rinkeby) network without the need to set up a complete Ethereum node or wallet by using a hosted Ethereum node cluster.
 
 ## 2. General write-up
 
