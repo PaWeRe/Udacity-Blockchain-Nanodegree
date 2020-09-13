@@ -2,7 +2,7 @@ pragma solidity >=0.4.24;
 // Define a contract 'Supplychain'
 
 // Import the library 'Roles'
-import "../coffeecore/Ownable.sol" as O2;
+//import "../coffeecore/Ownable.sol" as O2;
 
 contract SupplyChain {
 
